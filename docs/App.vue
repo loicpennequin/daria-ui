@@ -7,10 +7,10 @@
     max-w-screen-xl
     m-x-auto
     min-h-screen
-    p-x-8
+    p-x="5 md-8"
   >
     <TheHeader />
-    <TheSidebar />
-    <main><router-view /></main>
+    <TheSidebar lt-md="hidden" />
+    <main col-span="lt-md:full"><router-view /></main>
   </div>
 </template>

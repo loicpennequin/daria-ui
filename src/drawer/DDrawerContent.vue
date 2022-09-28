@@ -19,10 +19,12 @@ const { title, size } = useDrawer();
       bg="white dark:dark-2"
       color="inherit"
       transition-transform
-      w-full
+      w="full"
       :max-w="size"
       transform
       transition-all
+      min-h-full
+      overflow-y-auto
     >
       <slot name="header">
         <DDrawerHeader v-if="title" />
