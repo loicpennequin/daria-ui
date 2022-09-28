@@ -7,6 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    DButton: typeof import('./src/button/DButton.vue')['default']
+    DButtonBase: typeof import('./src/button/DButtonBase.vue')['default']
+    DButtonFull: typeof import('./src/button/DButtonFull.vue')['default']
+    DButtonGhost: typeof import('./src/button/DButtonGhost.vue')['default']
+    DButtonLight: typeof import('./src/button/DButtonLight.vue')['default']
+    DButtonOutlined: typeof import('./src/button/DButtonOutlined.vue')['default']
     DDrawer: typeof import('./src/drawer/DDrawer.vue')['default']
     DDrawerBackdrop: typeof import('./src/drawer/DDrawerBackdrop.vue')['default']
     DDrawerContent: typeof import('./src/drawer/DDrawerContent.vue')['default']

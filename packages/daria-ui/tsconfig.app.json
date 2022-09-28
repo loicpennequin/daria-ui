@@ -13,7 +13,7 @@
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
-    "lib": ["es2019"],
+    "lib": ["ES2019", "DOM", "DOM.Iterable"],
     "paths": {
       "@/*": ["./src/*"]
     }
