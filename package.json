@@ -15,22 +15,26 @@
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@headlessui/vue": "^1.7.2",
+    "@unocss/runtime": "^0.45.25",
     "@vueuse/core": "^9.3.0",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.0.21",
     "vue": "^3.2.38",
-    "vue-router": "^4.1.5"
+    "@unocss/preset-attributify": "^0.45.25",
+    "@unocss/preset-uno": "^0.45.25"
+  },
+  "dependencies": {
+    "vue-router": "^4.1.5",
+    "pinia": "^2.0.21"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.33",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/jsdom": "^20.0.0",
+    "@types/lodash-es": "^4.17.6",
     "@types/node": "^16.11.56",
-    "@unocss/preset-attributify": "^0.45.25",
     "@unocss/preset-icons": "^0.45.25",
-    "@unocss/preset-uno": "^0.45.25",
     "@unocss/preset-web-fonts": "^0.45.25",
     "@unocss/reset": "^0.45.25",
     "@unocss/vite": "^0.45.25",

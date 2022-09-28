@@ -10,13 +10,22 @@ declare module '@vue/runtime-core' {
     App: typeof import('./docs/App.vue')['default'];
     Button: typeof import('./docs/pages/components/button.vue')['default'];
     Configuration: typeof import('./docs/pages/getting-started/configuration.vue')['default'];
+    DDrawer: typeof import('./src/drawer/DDrawer.vue')['default'];
+    DDrawerBackdrop: typeof import('./src/drawer/DDrawerBackdrop.vue')['default'];
+    DDrawerContent: typeof import('./src/drawer/DDrawerContent.vue')['default'];
+    DDrawerHeader: typeof import('./src/drawer/DDrawerHeader.vue')['default'];
+    DialogPanel: typeof import('@headlessui/vue')['DialogPanel'];
+    DialogTitle: typeof import('@headlessui/vue')['DialogTitle'];
     Drawer: typeof import('./docs/pages/components/drawer.vue')['default'];
+    DSurface: typeof import('./src/surface/DSurface.vue')['default'];
     Installation: typeof import('./docs/pages/getting-started/installation.vue')['default'];
     Pages: typeof import('./docs/pages/index.vue')['default'];
     RouterLink: typeof import('vue-router')['RouterLink'];
     RouterView: typeof import('vue-router')['RouterView'];
     SidebarEntry: typeof import('./docs/components/SidebarEntry.vue')['default'];
     TheHeader: typeof import('./docs/components/TheHeader.vue')['default'];
+    Theming: typeof import('./docs/pages/getting-started/theming.vue')['default'];
     TheSidebar: typeof import('./docs/components/TheSidebar.vue')['default'];
+    TransitionChild: typeof import('@headlessui/vue')['TransitionChild'];
   }
 }

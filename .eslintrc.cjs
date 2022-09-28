@@ -20,6 +20,7 @@ module.exports = {
   },
   rules: {
     curly: 'off',
+    'no-undef': 'off',
     'vue/no-multiple-template-root': 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', { typedefs: false }],

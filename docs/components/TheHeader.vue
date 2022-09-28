@@ -29,7 +29,7 @@
         i-mdi-github
         text-3xl
         aspect-square
-        color="hover:blue-5"
+        color="hover:context-6"
       />
     </div>
   </header>

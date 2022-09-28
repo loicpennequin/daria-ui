@@ -287,6 +287,18 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
   integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
 
+"@types/lodash-es@^4.17.6":
+  version "4.17.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash-es/-/lodash-es-4.17.6.tgz#c2ed4c8320ffa6f11b43eb89e9eaeec65966a0a0"
+  integrity sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.185"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.185.tgz#c9843f5a40703a8f5edfd53358a58ae729816908"
+  integrity sha512-evMDG1bC4rgQg4ku9tKpuMh5iBNEwNa3tf9zRHdP1qlv+1WUg44xat4IxCE14gIpZRGUUWAx2VhItCZc25NfMA==
+
 "@types/ms@*":
   version "0.7.31"
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
@@ -437,7 +449,7 @@
     pathe "^0.3.7"
     sirv "^2.0.2"
 
-"@unocss/preset-attributify@^0.45.25":
+"@unocss/preset-attributify@0.45.25", "@unocss/preset-attributify@^0.45.25":
   version "0.45.25"
   resolved "https://registry.yarnpkg.com/@unocss/preset-attributify/-/preset-attributify-0.45.25.tgz#54c0b8820705d732cf33659c948040af1cd452d5"
   integrity sha512-Bj/q/bHPC61893d8iB7WjN5Km/JI4U1OF62PhdJfOjdXcRfPDNgpup2J/HnbeZyDDRsig5fLC9WSbpsgKW1+hA==
@@ -460,7 +472,7 @@
   dependencies:
     "@unocss/core" "0.45.25"
 
-"@unocss/preset-uno@^0.45.25":
+"@unocss/preset-uno@0.45.25", "@unocss/preset-uno@^0.45.25":
   version "0.45.25"
   resolved "https://registry.yarnpkg.com/@unocss/preset-uno/-/preset-uno-0.45.25.tgz#26cef3876f47f36c82930c55a4b92db09baba130"
   integrity sha512-E7FI3VbDHFKtUtAj0tjGIcHl7rrTDZqMyXCvARBrIPFK6qlf/slXIrp974joxpUtJ2/L7BrJzCyEJYmprUmzkA==
@@ -492,6 +504,15 @@
   version "0.45.25"
   resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.45.25.tgz#f9deb36adbf4610494242175467a0fab10ce0700"
   integrity sha512-ab4sP4ybikPq6eje66SIgL/KAkrx6pjx03KFlziHGdfnXpNxTYP5RCXXw5rcVX778NyV6Lk0VyidC8jRp4XtTQ==
+
+"@unocss/runtime@^0.45.25":
+  version "0.45.25"
+  resolved "https://registry.yarnpkg.com/@unocss/runtime/-/runtime-0.45.25.tgz#5915e34bf1f324d271d5099ebf01c4bc9ff5bda4"
+  integrity sha512-4Sn4YZ3x5kk2XFVgFeucPYo58FNDtTZzpkmZU/S3hDUrvjfp3IGdfKKikG3ZhhE22HVmCVNT+JFjblAUTDx9eg==
+  dependencies:
+    "@unocss/core" "0.45.25"
+    "@unocss/preset-attributify" "0.45.25"
+    "@unocss/preset-uno" "0.45.25"
 
 "@unocss/scope@0.45.25":
   version "0.45.25"

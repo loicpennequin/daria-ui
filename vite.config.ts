@@ -9,7 +9,10 @@ import presetWebFonts from '@unocss/preset-web-fonts';
 import { presetDaria } from './src/unocss';
 import Pages from 'vite-plugin-pages';
 import Components from 'unplugin-vue-components/vite';
+import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers';
 import AutoImport from 'unplugin-auto-import/vite';
+import { resolve } from 'path';
+import { peerDependencies } from './package.json';
 
 export default defineConfig({
   plugins: [
@@ -25,6 +28,7 @@ export default defineConfig({
       imports: ['vue', '@vueuse/core']
     }),
     Components({
+      resolvers: [HeadlessUiResolver()],
       dirs: ['src', 'docs'],
       extensions: ['vue'],
       deep: true
@@ -47,5 +51,18 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src', 'index.ts'),
+      formats: ['es', 'cjs'],
+      fileName: ext => `daria-ui.${ext}.js`
+    },
+    rollupOptions: {
+      external: [...Object.keys(peerDependencies)]
+    },
+    target: 'esnext',
+    sourcemap: true
   }
 });
