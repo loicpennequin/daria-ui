@@ -1,7 +1,7 @@
 ---
 title: 'Getting Started | Daria-UI'
 ---
-## Installation
+# Installation
 
 1 - Install the library and it's peer dependencies
 

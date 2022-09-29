@@ -16,17 +16,16 @@ const toggleDark = () => {
 
 <template>
   <DSurface p="y-3" flex justify-between items-center>
-    <router-link to="/">
-      <h1
-        text-3xl
-        font-bold
-        bg="clip-text gradient-to-r"
-        text-transparent
-        from-violet-6
-        to-cyan-5
-      >
-        Daria-UI
-      </h1>
+    <router-link
+      to="/"
+      text-3xl
+      font-bold
+      bg="clip-text gradient-to-r"
+      text-transparent
+      from-violet-6
+      to-cyan-5
+    >
+      Daria-UI
     </router-link>
 
     <input

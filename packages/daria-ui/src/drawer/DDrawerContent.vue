@@ -2,8 +2,6 @@
 import { useDrawer } from './useDrawer';
 // const attrs = useAttrs();
 const { title, size } = useDrawer();
-
-const slots = useSlots();
 </script>
 
 <template>

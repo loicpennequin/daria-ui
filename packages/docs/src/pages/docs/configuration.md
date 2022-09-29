@@ -2,4 +2,4 @@
 title: 'Configuration | Daria-UI'
 ---
 
-## Configuration
+# Configuration

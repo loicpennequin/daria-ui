@@ -8,7 +8,7 @@ const props = defineProps<Props>();
 <template>
   <li space-y-2>
     <h2 font-semibold text-lg>{{ props.title }}</h2>
-    <ul>
+    <ul space-y-1>
       <li v-for="link in links" :key="link.to">
         <router-link
           :to="link.to"
