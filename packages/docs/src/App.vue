@@ -9,11 +9,13 @@
     bg-white
     min-h-screen
   >
-    <TheHeader sticky top-0 col-span-full />
+    <TheHeader sticky z-1 top-0 col-span-full />
     <aside lt-md="hidden">
       <a href="#main" sr-only focus-visible="not-sr-only">Skip to content</a>
       <TheSidebar sticky top-16 />
     </aside>
-    <main id="main" col-span="lt-md:full"><router-view /></main>
+    <main id="main" col-span="lt-md:full">
+      <router-view />
+    </main>
   </div>
 </template>

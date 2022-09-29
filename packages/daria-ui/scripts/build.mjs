@@ -11,7 +11,7 @@ const libraries = [
   },
   {
     entry: path.resolve(__dirname, '../src/unocss.ts'),
-    fileName: ext => `uno-preset-datia.${ext}.js`
+    fileName: ext => `uno-preset-daria.${ext}.js`
   }
 ];
 

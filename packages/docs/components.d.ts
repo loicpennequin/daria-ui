@@ -7,18 +7,22 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    '[...slug]': typeof import('./src/pages/docs/[...slug].vue')['default']
     App: typeof import('./src/App.vue')['default']
     Button: typeof import('./src/pages/components/button.vue')['default']
-    Configuration: typeof import('./src/pages/getting-started/configuration.vue')['default']
+    ComponentDetails: typeof import('./src/components/ComponentDetails.vue')['default']
+    Configuration: typeof import('./src/pages/docs/configuration.vue')['default']
+    DarkModeToggle: typeof import('./src/components/DarkModeToggle.vue')['default']
     Drawer: typeof import('./src/pages/components/drawer.vue')['default']
-    Installation: typeof import('./src/pages/getting-started/installation.vue')['default']
+    Installation: typeof import('./src/pages/docs/installation.vue')['default']
     PageLayout: typeof import('./src/components/PageLayout.vue')['default']
     Pages: typeof import('./src/pages/index.vue')['default']
+    PropsParser: typeof import('./src/components/PropsParser.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SidebarEntry: typeof import('./src/components/SidebarEntry.vue')['default']
     TheHeader: typeof import('./src/components/TheHeader.vue')['default']
-    Theming: typeof import('./src/pages/getting-started/theming.vue')['default']
+    Theming: typeof import('./src/pages/docs/theming.vue')['default']
     TheSidebar: typeof import('./src/components/TheSidebar.vue')['default']
   }
 }

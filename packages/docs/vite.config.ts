@@ -9,11 +9,29 @@ import presetWebFonts from '@unocss/preset-web-fonts';
 import Pages from 'vite-plugin-pages';
 import Components from 'unplugin-vue-components/vite';
 import AutoImport from 'unplugin-auto-import/vite';
+import Markdown from 'vite-plugin-md';
+import code from '@yankeeinlondon/code-builder';
+import link from '@yankeeinlondon/link-builder';
+import meta from '@yankeeinlondon/meta-builder';
+import transformerDirective from '@unocss/transformer-directives';
 
 export default defineConfig({
   plugins: [
-    vue(),
-    Pages({ dirs: ['src/pages'] }),
+    vue({
+      include: [/\.vue$/, /\.md$/] // <--
+    }),
+    Markdown({
+      headEnabled: true,
+      builders: [
+        code({
+          languageGrammars: ['js', 'ts', 'vue', 'bash'],
+          theme: 'base'
+        }),
+        link(),
+        meta()
+      ]
+    }),
+    Pages({ dirs: ['src/pages'], extensions: ['vue', 'md'] }),
     AutoImport({
       include: [
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
@@ -21,7 +39,7 @@ export default defineConfig({
         /\.vue\?vue/, // .vue
         /\.md$/ // .md
       ],
-      imports: ['vue']
+      imports: ['vue', '@vueuse/core']
     }),
     Components({
       dirs: ['src'],
@@ -29,6 +47,7 @@ export default defineConfig({
       deep: true
     }),
     Unocss({
+      transformers: [transformerDirective()],
       presets: [
         presetAttributify(),
         presetUno(),

@@ -19,6 +19,7 @@ declare module '@vue/runtime-core' {
     DDrawerHeader: typeof import('./src/drawer/DDrawerHeader.vue')['default']
     DialogPanel: typeof import('@headlessui/vue')['DialogPanel']
     DialogTitle: typeof import('@headlessui/vue')['DialogTitle']
+    DIconButton: typeof import('./src/button/DIconButton.vue')['default']
     DSurface: typeof import('./src/surface/DSurface.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

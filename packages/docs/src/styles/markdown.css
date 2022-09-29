@@ -1,0 +1,8 @@
+.markdown-body h2 {
+  --at-apply: 'text-3xl font-bold m-b-8';
+}
+
+.code-wrapper {
+  --at-apply: 'p-5 m-y-8! dark:color-white';
+  overflow-x: auto !important;
+}

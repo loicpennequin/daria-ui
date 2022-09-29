@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import { DDrawer, DDrawerContent, DDrawerBackdrop } from '@daria/ui';
+import {
+  DDrawer,
+  DDrawerContent,
+  DDrawerBackdrop,
+  DIconButton
+} from '@daria/ui';
 
 const isSidebarOpened = ref(false);
+const isDark = useDark();
+const toggleDark = () => {
+  isDark.value = !isDark.value;
+};
 </script>
 
 <template>
@@ -38,14 +47,18 @@ const isSidebarOpened = ref(false);
       lt-md="hidden"
     />
 
-    <div flex gap-5>
-      <a
+    <div flex gap-5 cs-dark>
+      <DIconButton
+        is="a"
+        text-2xl
         href="https://github.com/loicpennequin/daria-ui"
-        i-mdi-github
-        text-3xl
-        aspect-square
-        color="hover:context-6"
-      />
+      >
+        <span i-mdi-github />
+      </DIconButton>
+
+      <DIconButton text-2xl title="toggle dark mode" @click="toggleDark">
+        <span :i="isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'" />
+      </DIconButton>
     </div>
     <DDrawer
       v-model:is-opened="isSidebarOpened"

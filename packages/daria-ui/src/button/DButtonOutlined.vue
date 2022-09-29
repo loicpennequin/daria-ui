@@ -1,8 +1,8 @@
 <template>
   <DButtonBase
-    bg="transparent hover:context-5/10 disabled:transparent"
-    color="disabled:gray-4 context-5"
-    border="solid 2 current"
+    bg="transparent hover:context-6/10 disabled:transparent"
+    color="disabled:gray-4 context-6"
+    border="solid 1 current"
   >
     <slot />
   </DButtonBase>

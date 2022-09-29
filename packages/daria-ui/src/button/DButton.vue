@@ -4,8 +4,7 @@ import DButtonFull from './DButtonFull.vue';
 import DButtonOutlined from './DButtonOutlined.vue';
 import DButtonGhost from './DButtonGhost.vue';
 import DButtonLight from './DButtonLight.vue';
-
-type ButtonVariant = 'full' | 'outlined' | 'ghost' | 'light';
+import type { ButtonVariant } from './types';
 
 type Props = {
   variant?: ButtonVariant;

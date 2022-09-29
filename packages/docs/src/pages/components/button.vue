@@ -1,1 +1,0 @@
-<template>Button component</template>

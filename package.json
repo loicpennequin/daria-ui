@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "ui": "yarn workspace @daria/ui",
-    "docs": "yarn workspace @daria/ui-docs"
+    "docs": "yarn workspace docs"
   },
   "workspaces": {
     "packages": [
