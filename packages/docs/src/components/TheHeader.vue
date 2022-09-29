@@ -15,14 +15,6 @@ const toggleDark = () => {
 
 <template>
   <header p-y-3 bg-white flex justify-between items-center>
-    <button
-      i-mdi-menu
-      text-3xl
-      aspect-square
-      color="hover:context-6"
-      md="hidden"
-      @click="isSidebarOpened = true"
-    />
     <router-link to="/">
       <h1
         text-3xl
@@ -58,6 +50,15 @@ const toggleDark = () => {
 
       <DIconButton text-2xl title="toggle dark mode" @click="toggleDark">
         <span :i="isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'" />
+      </DIconButton>
+
+      <DIconButton
+        title="menu"
+        md="hidden"
+        text-3xl
+        @click="isSidebarOpened = true"
+      >
+        <span i-mdi-menu />
       </DIconButton>
     </div>
     <DDrawer

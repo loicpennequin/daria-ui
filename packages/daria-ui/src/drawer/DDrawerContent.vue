@@ -2,6 +2,8 @@
 import { useDrawer } from './useDrawer';
 // const attrs = useAttrs();
 const { title, size } = useDrawer();
+
+const slots = useSlots();
 </script>
 
 <template>
@@ -17,8 +19,6 @@ const { title, size } = useDrawer();
   >
     <DialogPanel
       as="div"
-      bg="white dark:dark-2"
-      color="inherit"
       transition-transform
       w="full"
       :max-w="size"
@@ -27,11 +27,19 @@ const { title, size } = useDrawer();
       min-h-full
       overflow-y-auto
     >
-      <slot name="header">
-        <DDrawerHeader v-if="title" />
-      </slot>
+      <DSurface min-h-full p="0" flex flex-col>
+        <slot name="header">
+          <DDrawerHeader v-if="title" />
+        </slot>
 
-      <slot />
+        <div flex-1>
+          <slot />
+        </div>
+
+        <DSurface is="footer" p="0" sticky bottom-0>
+          <slot name="footer"></slot>
+        </DSurface>
+      </DSurface>
     </DialogPanel>
   </TransitionChild>
 </template>
