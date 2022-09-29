@@ -6,7 +6,7 @@ title: 'Getting Started | Daria-UI'
 1 - Install the library and it's peer dependencies
 
 ```bash
-yarn add @daria/ui @vueuse/core @headlessui/vue @unocss/runtime @unocss/preset-attributify @unocss/preset-uno
+yarn add @daria/ui @vueuse/core @headlessui/vue @unocss/runtime @unocss/preset-attributify @unocss/preset-uno @unocss/preset-icons
 ```
 
 2 - Add the UnoCSS vite plugin to your configuration.
@@ -22,7 +22,6 @@ export default defineConfig({
   plugins: [
     Unocss({
       presets: [
-
         presetAttributify(),
         presetUno(),
         presetIcons(),

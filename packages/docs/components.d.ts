@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     ComponentDetails: typeof import('./src/components/ComponentDetails.vue')['default']
     Configuration: typeof import('./src/pages/docs/configuration.vue')['default']
     DarkModeToggle: typeof import('./src/components/DarkModeToggle.vue')['default']
+    Docs: typeof import('./src/pages/docs.vue')['default']
     Drawer: typeof import('./src/pages/components/drawer.vue')['default']
     Installation: typeof import('./src/pages/docs/installation.vue')['default']
     PageLayout: typeof import('./src/components/PageLayout.vue')['default']

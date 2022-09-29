@@ -3,7 +3,8 @@ import {
   DDrawer,
   DDrawerContent,
   DDrawerBackdrop,
-  DIconButton
+  DIconButton,
+  DSurface
 } from '@daria/ui';
 
 const isSidebarOpened = ref(false);
@@ -14,7 +15,7 @@ const toggleDark = () => {
 </script>
 
 <template>
-  <header p-y-3 bg-white flex justify-between items-center>
+  <DSurface p="y-3" flex justify-between items-center>
     <router-link to="/">
       <h1
         text-3xl
@@ -39,7 +40,7 @@ const toggleDark = () => {
       lt-md="hidden"
     />
 
-    <div flex gap-5 cs-dark>
+    <div flex gap-5 cs="dark dark:light">
       <DIconButton
         is="a"
         text-2xl
@@ -65,12 +66,12 @@ const toggleDark = () => {
       v-model:is-opened="isSidebarOpened"
       md="hidden"
       title="Menu"
-      color-scheme="light"
+      color-scheme="light dark:dark"
     >
       <DDrawerBackdrop />
       <DDrawerContent w="85%">
         <TheSidebar p-3 />
       </DDrawerContent>
     </DDrawer>
-  </header>
+  </DSurface>
 </template>

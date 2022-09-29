@@ -6,7 +6,6 @@
     max-w-screen-xl
     m-x-auto
     p-x="5 md-8"
-    bg-white
     min-h-screen
   >
     <TheHeader sticky z-1 top-0 col-span-full />
@@ -19,3 +18,9 @@
     </main>
   </div>
 </template>
+
+<style>
+body {
+  --at-apply: 'bg-white dark:bg-dark-2 color-black dark:color-white';
+}
+</style>

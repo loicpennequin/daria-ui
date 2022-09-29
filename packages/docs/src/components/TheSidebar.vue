@@ -13,7 +13,7 @@ const components = ['Button', 'Drawer'].map(c => ({
 }));
 </script>
 <template>
-  <nav min-w-12rem>
+  <nav min-w-12rem cs-blue>
     <ul space-y-5>
       <SidebarEntry title="Guide" :links="gettingStarted" />
       <SidebarEntry title="Components" :links="components" />

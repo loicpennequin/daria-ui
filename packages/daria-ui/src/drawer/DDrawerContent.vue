@@ -36,9 +36,9 @@ const slots = useSlots();
           <slot />
         </div>
 
-        <DSurface is="footer" p="0" sticky bottom-0>
+        <footer bg-inherit sticky bottom-0>
           <slot name="footer"></slot>
-        </DSurface>
+        </footer>
       </DSurface>
     </DialogPanel>
   </TransitionChild>
