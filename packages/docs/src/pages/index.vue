@@ -1,6 +1,3 @@
-<script setup lang="ts">
-import { DButton } from '@daria/ui';
-</script>
 <template>
   <div h="50vh" w-full grid place-content-center p-x-3>
     <div text-center>

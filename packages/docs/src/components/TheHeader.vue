@@ -1,12 +1,4 @@
 <script setup lang="ts">
-import {
-  DDrawer,
-  DDrawerContent,
-  DDrawerBackdrop,
-  DIconButton,
-  DSurface
-} from '@daria/ui';
-
 const isSidebarOpened = ref(false);
 const isDark = useDark();
 const toggleDark = () => {

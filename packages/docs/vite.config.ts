@@ -14,6 +14,8 @@ import code from '@yankeeinlondon/code-builder';
 import link from '@yankeeinlondon/link-builder';
 import meta from '@yankeeinlondon/meta-builder';
 import transformerDirective from '@unocss/transformer-directives';
+import { presetDaria } from '@daria/ui/preset';
+import { dariaUiResolver } from '@daria/ui/resolver';
 
 export default defineConfig({
   plugins: [
@@ -44,7 +46,8 @@ export default defineConfig({
     Components({
       dirs: ['src'],
       extensions: ['vue'],
-      deep: true
+      deep: true,
+      resolvers: [dariaUiResolver()]
     }),
     Unocss({
       transformers: [transformerDirective()],
@@ -52,6 +55,7 @@ export default defineConfig({
         presetAttributify(),
         presetUno(),
         presetIcons(),
+        presetDaria(),
         presetWebFonts({
           fonts: {
             sans: 'Roboto'

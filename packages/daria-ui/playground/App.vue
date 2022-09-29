@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import '@/unplugin-resolver';
 const isOpened = ref(false);
 const isDark = useDark();
 const toggleDark = () => {
