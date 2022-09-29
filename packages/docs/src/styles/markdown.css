@@ -1,5 +1,13 @@
-.markdown-body h2 {
+.markdown-body h1 {
   --at-apply: 'text-3xl font-bold m-b-8';
+}
+
+.markdown-body h2 {
+  --at-apply: 'text-3xl font-semibold';
+}
+
+.markdown-body h3 {
+  --at-apply: 'text-xl';
 }
 
 .code-wrapper {

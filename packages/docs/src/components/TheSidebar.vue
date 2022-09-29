@@ -2,6 +2,7 @@
 import { snakeCase } from 'lodash-es';
 
 const gettingStarted = [
+  { label: 'Why Daria UI ?', to: '/docs/why-daria-ui' },
   { label: 'Getting Started', to: '/docs/getting-started' },
   { label: 'Configuration', to: '/docs/configuration' },
   { label: 'Theming', to: '/docs/theming' }

@@ -1,26 +1,24 @@
-<template>
-  <div
-    grid
-    grid-cols="[auto_minmax(0,1fr)]"
-    grid-rows="[auto_minmax(0,1fr)]"
-    max-w-screen-xl
-    m-x-auto
-    p-x="5 md-8"
-    min-h-screen
-  >
-    <TheHeader sticky z-1 top-0 col-span-full />
-    <aside lt-md="hidden">
-      <a href="#main" sr-only focus-visible="not-sr-only">Skip to content</a>
-      <TheSidebar sticky top-16 />
-    </aside>
-    <main id="main" col-span="lt-md:full">
-      <router-view />
-    </main>
-  </div>
-</template>
+<script setup lang="ts">
+import type { AsyncComponentLoader } from 'vue';
+import { useRoute } from 'vue-router';
+const layoutMap = new Map<string, AsyncComponentLoader>([
+  [
+    'default',
+    defineAsyncComponent(() => import('@/components/layouts/Default.vue'))
+  ],
+  [
+    'no-sidebar',
+    defineAsyncComponent(() => import('@/components/layouts/NoSidebar.vue'))
+  ]
+]);
+const route = useRoute();
+const layoutComponent = computed(() =>
+  layoutMap.get((route.meta.layout as string) || 'default')
+);
+</script>
 
-<style>
-body {
-  --at-apply: 'bg-white dark:bg-dark-2 color-black dark:color-white';
-}
-</style>
+<template>
+  <component :is="layoutComponent">
+    <router-view />
+  </component>
+</template>

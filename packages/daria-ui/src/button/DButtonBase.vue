@@ -20,7 +20,7 @@ const attrs = useAttrs();
     no-underline
     whitespace-nowrap
     align-middle
-    p="x-3 y-2"
+    p="x-0.75em y-0.5em"
     flex
     items-center
     justify-center

@@ -21,6 +21,7 @@ const toggleDark = () => {
       text-3xl
       font-bold
       bg="clip-text gradient-to-r"
+      text-stroke="0.5 black dark:white"
       text-transparent
       from-violet-6
       to-cyan-5
