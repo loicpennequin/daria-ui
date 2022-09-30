@@ -23,7 +23,8 @@
   --at-apply: 'w-full border-1 border-solid border-gray-4 dark:border-gray-5';
 }
 
-.markdown-body thead {
+.markdown-body thead,
+.markdown-body tbody tr {
   --at-apply: 'border-b-1 border-b-solid border-b-gray-4 dark:border-gray-5';
 }
 

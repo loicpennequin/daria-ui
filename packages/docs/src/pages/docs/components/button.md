@@ -11,9 +11,20 @@ import ButtonCustom from '@/components/examples/button/ButtonCustom.vue';
 # Button
 
 ## Props
-| Name                                | Description                                                     | Type                  | Accepted Values                                               | Default |
-| ----------------------------------- | --------------------------------------------------------------- | --------------------- | ------------------------------------------------------------- | ------- |
-| variant                               | style variant                                                     | string                | full / light /outlined / ghost                                        | fumm       |
+| Name    | Description   | Type     | Accepted Values               | Default |
+| ------- | ------------- | -------- | ----------------------------- | ------- |
+| variant | style variant | string   | full / light /outlined / ghost| full    |
+
+
+## Emits
+
+This component does not emit any event
+
+# Slots
+
+| Name    | Description               | Slot Props |
+|-------- | ------------------------- | ---------- |
+| default | The content of the button | -          | 
 
 ## Examples
 
