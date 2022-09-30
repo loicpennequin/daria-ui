@@ -1,5 +1,5 @@
 import '@unocss/reset/tailwind.css';
-import '@daria/ui/dist/style.css';
+import '@dariajs/ui/dist/style.css';
 import '@/styles/markdown.css';
 import 'uno.css';
 import { createApp } from 'vue';
@@ -9,7 +9,7 @@ import { createHead } from '@vueuse/head';
 import router from './router';
 
 import App from './App.vue';
-import { dariaUiPlugin } from '@daria/ui';
+import { dariaUiPlugin } from '@dariajs/ui';
 
 createApp(App)
   .use(createPinia())

@@ -10,7 +10,7 @@ const toggleDark = () => {
 <template>
   <DSurface cs="dark dark:red" p-10 min-h-screen>
     <div flex gap-4 items-center>
-      <DButton @click="isOpened = true">Open Drawer</DButton>
+      <DButton cs-yellow @click="isOpened = true">Open Drawer</DButton>
       <DIconButton text-2xl title="toggle dark mode" @click="toggleDark">
         <span :i="isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'" />
       </DIconButton>

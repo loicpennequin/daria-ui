@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { snakeCase } from 'lodash-es';
+import SidebarEntry from './SidebarEntry.vue';
 
 const gettingStarted = [
   { label: 'Why Daria UI ?', to: '/docs/why-daria-ui' },

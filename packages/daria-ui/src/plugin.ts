@@ -1,3 +1,5 @@
+import './style.css';
+
 export const dariaUiPlugin = {
   async install() {
     const [

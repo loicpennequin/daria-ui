@@ -8,7 +8,7 @@ const bg = computed(() =>
 );
 
 const color = computed(() =>
-  colorScheme.value === 'light' ? 'context-readable-1' : 'context-readable-6'
+  colorScheme.value === 'light' ? 'readable-1' : 'readable-6'
 );
 </script>
 

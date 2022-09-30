@@ -1,20 +1,16 @@
 <script setup lang="ts">
-import type { Component } from 'vue';
-
-type Props = {
-  is?: string | Component;
-};
-
-const props = withDefaults(defineProps<Props>(), {
-  is: 'button'
-});
-
 const attrs = useAttrs();
+
+const is = computed(() => {
+  if (attrs.to) return 'router-link';
+  if (attrs.href) return 'a';
+  return 'button';
+});
 </script>
 
 <template>
   <component
-    :is="props.is"
+    :is="is"
     :cursor="!attrs.disabled && 'pointer'"
     select-none
     no-underline

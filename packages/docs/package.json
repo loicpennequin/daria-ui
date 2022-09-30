@@ -13,7 +13,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@daria/ui": "*",
+    "@dariajs/ui": "*",
     "@types/lodash-es": "^4.17.6",
     "@unocss/preset-attributify": "^0.45.25",
     "@unocss/preset-uno": "^0.45.25",
@@ -51,7 +51,7 @@
     "prettier": "^2.7.1",
     "start-server-and-test": "^1.14.0",
     "typescript": "~4.7.4",
-    "vite": "^3.0.9",
+    "vite": "^3.1.4",
     "vite-plugin-dynamic-import": "^1.2.2",
     "vite-plugin-md": "^0.20.4",
     "vitest": "^0.23.0",

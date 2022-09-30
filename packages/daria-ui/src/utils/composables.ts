@@ -1,4 +1,7 @@
-import type { InjectionKey } from 'vue';
+import type { VueInstance } from '@vueuse/core';
+import type { InjectionKey, Ref } from 'vue';
+import { getColorScheme } from './dom';
+import type { Maybe } from './types';
 
 export const useSafeInject = <T>(injectionKey: InjectionKey<T>): T => {
   const context = inject<T>(injectionKey);
@@ -10,4 +13,21 @@ export const useSafeInject = <T>(injectionKey: InjectionKey<T>): T => {
   }
 
   return context;
+};
+
+export const useColorScheme = (el: Ref<Maybe<HTMLElement | VueInstance>>) => {
+  const cs = ref<string>();
+
+  const setColorScheme = () => {
+    const node = unrefElement(el);
+    if (!node) return;
+    cs.value = getColorScheme(node);
+  };
+
+  useMutationObserver(el, setColorScheme, {
+    attributes: true
+  });
+  onMounted(setColorScheme);
+
+  return cs;
 };

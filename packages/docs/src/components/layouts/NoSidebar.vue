@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import TheHeader from '../TheHeader.vue';
+</script>
+
 <template>
   <div
     grid
@@ -10,7 +14,7 @@
       <TheHeader />
     </div>
 
-    <main id="main" m-x="-5 md:-8">
+    <main id="main">
       <slot />
     </main>
   </div>

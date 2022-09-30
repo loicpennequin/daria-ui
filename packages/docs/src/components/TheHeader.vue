@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import TheSidebar from './TheSidebar.vue';
+import {
+  DSurface,
+  DIconButton,
+  DDrawer,
+  DDrawerBackdrop,
+  DDrawerContent
+} from '@dariajs/ui';
 const isSidebarOpened = ref(false);
 const isDark = useDark();
 const toggleDark = () => {
@@ -13,10 +21,9 @@ const toggleDark = () => {
       text-3xl
       font-bold
       bg="clip-text gradient-to-r"
-      text-stroke="0.5 black dark:white"
       text-transparent
-      from-violet-6
-      to-cyan-5
+      un-from="violet-6 dark:violet-5"
+      un-to="cyan-5 dark:cyan-3"
     >
       Daria-UI
     </router-link>

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import TheHeader from '../TheHeader.vue';
+import TheSidebar from '../TheSidebar.vue';
+</script>
+
 <template>
   <div
     grid

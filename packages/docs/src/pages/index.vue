@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { DButton } from '@dariajs/ui';
+import { useHead } from '@vueuse/head';
+useHead({
+  title: 'Daria UI'
+});
+</script>
+
 <template>
   <div h="50vh" w-full grid place-content-center p-x-3>
     <div text-center>
@@ -21,19 +29,20 @@
       <footer flex items-center justify-around m-bs-8 gap-4>
         <DButton
           is="router-link"
-          cs-blue
+          cs-violet
           rounded="full"
-          un-text="lg sm:2xl"
+          un-text="lg sm:xl"
           to="/docs/getting-started"
         >
           Getting Started
         </DButton>
         <DButton
           is="router-link"
-          cs-cyan
+          cs-blue
           rounded="full"
-          un-text="lg sm:2xl"
+          un-text="lg sm:xl"
           to="/docs/why-daria-ui"
+          color="white"
         >
           Why Daria UI ?
         </DButton>

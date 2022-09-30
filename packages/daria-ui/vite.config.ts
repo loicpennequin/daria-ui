@@ -11,7 +11,7 @@ import Components from 'unplugin-vue-components/vite';
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers';
 import AutoImport from 'unplugin-auto-import/vite';
 import { resolve } from 'path';
-import { dependencies } from './package.json';
+import { dependencies, peerDependencies } from './package.json';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
@@ -60,7 +60,7 @@ export default defineConfig({
       fileName: ext => `daria-ui.${ext}.js`
     },
     rollupOptions: {
-      external: [...Object.keys(dependencies)]
+      external: [...Object.keys(dependencies), ...Object.keys(peerDependencies)]
     },
     target: 'esnext',
     sourcemap: true

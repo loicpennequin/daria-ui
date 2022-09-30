@@ -8,13 +8,15 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     App: typeof import('./src/App.vue')['default']
-    DButton: typeof import('@daria/ui')['DButton']
-    DDrawer: typeof import('@daria/ui')['DDrawer']
-    DDrawerBackdrop: typeof import('@daria/ui')['DDrawerBackdrop']
-    DDrawerContent: typeof import('@daria/ui')['DDrawerContent']
+    Button: typeof import('./src/pages/docs/components/button.md')['default']
+    ButtonBasic: typeof import('./src/components/examples/button/ButtonBasic.vue')['default']
+    ButtonColors: typeof import('./src/components/examples/button/ButtonColors.vue')['default']
+    ButtonCustom: typeof import('./src/components/examples/button/ButtonCustom.vue')['default']
+    CodeExample: typeof import('./src/components/CodeExample.vue')['default']
+    Configuration: typeof import('./src/pages/docs/configuration.md')['default']
     Default: typeof import('./src/components/layouts/Default.vue')['default']
-    DIconButton: typeof import('@daria/ui')['DIconButton']
-    DSurface: typeof import('@daria/ui')['DSurface']
+    Drawer: typeof import('./src/pages/docs/components/drawer.md')['default']
+    GettingStarted: typeof import('./src/pages/docs/getting-started.md')['default']
     NoSidebar: typeof import('./src/components/layouts/NoSidebar.vue')['default']
     PageLayout: typeof import('./src/components/PageLayout.vue')['default']
     Pages: typeof import('./src/pages/index.vue')['default']
@@ -23,6 +25,8 @@ declare module '@vue/runtime-core' {
     SidebarEntry: typeof import('./src/components/SidebarEntry.vue')['default']
     Testimonial: typeof import('./src/components/Testimonial.vue')['default']
     TheHeader: typeof import('./src/components/TheHeader.vue')['default']
+    Theming: typeof import('./src/pages/docs/theming.md')['default']
     TheSidebar: typeof import('./src/components/TheSidebar.vue')['default']
+    WhyDariaUi: typeof import('./src/pages/docs/why-daria-ui.md')['default']
   }
 }

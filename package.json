@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "ui": "yarn workspace @daria/ui",
+    "ui": "yarn workspace @dariajs/ui",
     "docs": "yarn workspace docs"
   },
   "workspaces": {

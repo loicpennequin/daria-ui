@@ -3,14 +3,36 @@
 }
 
 .markdown-body h2 {
-  --at-apply: 'text-3xl font-semibold';
+  --at-apply: 'text-2xl font-semibold m-y-6';
 }
 
 .markdown-body h3 {
-  --at-apply: 'text-xl';
+  --at-apply: 'text-xl m-y-3';
+}
+
+.markdown-body p {
+  --at-apply: 'm-y-5   leading-relaxed';
 }
 
 .code-wrapper {
-  --at-apply: 'p-5 m-y-8! dark:color-white';
+  --at-apply: 'p-5 m-y-8! color-white';
   overflow-x: auto !important;
+}
+
+.markdown-body table {
+  --at-apply: 'w-full border-1 border-solid border-gray-4 dark:border-gray-5';
+}
+
+.markdown-body thead {
+  --at-apply: 'border-b-1 border-b-solid border-b-gray-4 dark:border-gray-5';
+}
+
+.markdown-body th,
+.markdown-body td {
+  --at-apply: 'text-left p-3';
+}
+
+.markdown-body th:not(:last-of-type),
+.markdown-body td:not(:last-of-type) {
+  --at-apply: 'border-r-1 border-r-solid border-r-gray-4 dark:border-gray-5';
 }

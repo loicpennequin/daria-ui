@@ -24,11 +24,11 @@ export const presetDaria = (): Preset => ({
     colors: {
       context: makeSwatch((_, index) => [
         index + 1,
-        `rgba(var(--daria-c-context-${index + 1}),%alpha)`
+        `rgba(var(--daria-cs-${index + 1}),%alpha)`
       ]),
-      contextReadable: makeSwatch((_, index) => [
+      readable: makeSwatch((_, index) => [
         index + 1,
-        `rgba(var(--daria-c-context-readable-${index + 1}),%alpha)`
+        `rgba(var(--daria-cs-readable-${index + 1}),%alpha)`
       ])
     }
   },
@@ -47,12 +47,13 @@ export const presetDaria = (): Preset => ({
             const color = parseColor(rawColor, theme);
             const a11y = parseColor(rawA11yColor, theme);
             return [
+              ['--daria-cs-scope', body],
               [
-                `--daria-c-context-${index + 1}`,
+                `--daria-cs-${index + 1}`,
                 `${color?.cssColor?.components?.join?.(',')}`
               ],
               [
-                `--daria-c-context-readable-${index + 1}`,
+                `--daria-cs-readable-${index + 1}`,
                 `${a11y?.cssColor?.components?.join?.(',')}`
               ]
             ];
