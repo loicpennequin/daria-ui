@@ -17,7 +17,6 @@ useHead({
         from="violet-6"
         to="cyan-5"
         text="transparent 5xl sm:9xl"
-        text-stroke="1 sm:3 black dark:white"
       >
         Daria-UI
       </h1>
@@ -32,7 +31,7 @@ useHead({
         <transition
           appear
           enter-active-class="transition-all duration-500"
-          enter-from-class="-translate-x-full scale-200 opacity-0"
+          enter-from-class="-translate-x-1/2 opacity-0"
         >
           <DButton
             is="router-link"
@@ -48,7 +47,7 @@ useHead({
         <transition
           appear
           enter-active-class="transition-all duration-500"
-          enter-from-class="translate-x-full scale-200 opacity-0"
+          enter-from-class="translate-x-1/2 opacity-0"
         >
           <DButton
             is="router-link"
