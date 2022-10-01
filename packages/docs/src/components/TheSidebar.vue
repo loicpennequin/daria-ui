@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { snakeCase } from 'lodash-es';
+import { kebabCase } from 'lodash-es';
 import SidebarEntry from './SidebarEntry.vue';
 
 const gettingStarted = [
@@ -9,9 +9,9 @@ const gettingStarted = [
   { label: 'Theming', to: '/docs/theming' }
 ];
 
-const components = ['Button', 'Drawer'].map(c => ({
+const components = ['Button', 'ButtonGroup', 'Drawer'].map(c => ({
   label: c,
-  to: `/docs/components/${snakeCase(c)}`
+  to: `/docs/components/${kebabCase(c)}`
 }));
 </script>
 <template>

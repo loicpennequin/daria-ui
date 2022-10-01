@@ -25,6 +25,5 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TransitionChild: typeof import('@headlessui/vue')['TransitionChild']
-    UseButtonGroup: typeof import('./src/button/useButtonGroup.vue')['default']
   }
 }
