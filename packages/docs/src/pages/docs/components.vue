@@ -55,14 +55,18 @@ watch(route, buildToc, { immediate: true });
     lt-xl="hidden"
     m-5
     min-w="12rem"
-    border="solid 1 gray-3"
+    border="solid 1 gray-3 dark:gray-5"
+    space-y-2
   >
+    <h2 text-xl font-semibold>Contents</h2>
     <ol>
       <li v-for="link in tocLinks" :key="link.anchor">
         <a
           :href="link.anchor"
           underline
-          :color="route.hash === link.anchor ? 'blue-6' : 'inherit'"
+          :color="
+            route.hash === link.anchor ? 'context-6 dark:context-3' : 'inherit'
+          "
         >
           {{ link.label }}
         </a>

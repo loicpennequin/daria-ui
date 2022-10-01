@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { DButton } from '@dariajs/ui';
 import { useHead } from '@vueuse/head';
+import SmileyFace from '../components/SmileyFace.vue';
 useHead({
   title: 'Daria UI'
 });
@@ -9,6 +10,7 @@ useHead({
 <template>
   <div h="50vh" w-full grid place-content-center p-x-3>
     <div text-center>
+      <SmileyFace :size="200" m-x-auto />
       <h1
         font-extrabold
         bg="clip-text gradient-to-r"
@@ -27,25 +29,38 @@ useHead({
       </p>
 
       <footer flex items-center justify-around m-bs-8 gap-4>
-        <DButton
-          is="router-link"
-          cs-violet
-          rounded="full"
-          un-text="lg sm:xl"
-          to="/docs/getting-started"
+        <transition
+          appear
+          enter-active-class="transition-all duration-500"
+          enter-from-class="-translate-x-full scale-200 opacity-0"
         >
-          Getting Started
-        </DButton>
-        <DButton
-          is="router-link"
-          cs-blue
-          rounded="full"
-          un-text="lg sm:xl"
-          to="/docs/why-daria-ui"
-          color="white"
+          <DButton
+            is="router-link"
+            cs-violet
+            rounded="full"
+            un-text="lg sm:xl"
+            to="/docs/getting-started"
+          >
+            Getting Started
+          </DButton>
+        </transition>
+
+        <transition
+          appear
+          enter-active-class="transition-all duration-500"
+          enter-from-class="translate-x-full scale-200 opacity-0"
         >
-          Why Daria UI ?
-        </DButton>
+          <DButton
+            is="router-link"
+            cs-blue
+            rounded="full"
+            un-text="lg sm:xl"
+            to="/docs/why-daria-ui"
+            color="white"
+          >
+            Why Daria UI ?
+          </DButton>
+        </transition>
       </footer>
     </div>
   </div>
