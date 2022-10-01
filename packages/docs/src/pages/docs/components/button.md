@@ -20,7 +20,7 @@ import ButtonCustom from '@/components/examples/button/ButtonCustom.vue';
 
 This component does not emit any event
 
-# Slots
+## Slots
 
 | Name    | Description               | Slot Props |
 |-------- | ------------------------- | ---------- |

@@ -8,7 +8,7 @@ import DrawerBasic from '@/components/examples/drawer/DrawerBasic.vue';
 
 # Drawer
 
-## SubComponents
+## Sub components
 
 - DrawerBackdrop
 - DrawerContent
