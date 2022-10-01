@@ -5,3 +5,5 @@ export { default as DButtonLight } from './DButtonLight.vue';
 export { default as DButtonOutlined } from './DButtonOutlined.vue';
 export { default as DButtonGhost } from './DButtonGhost.vue';
 export { default as DIconButton } from './DIconButton.vue';
+export { default as DButtonGroup } from './DButtonGroup.vue';
+export * from './useButtonGroup';

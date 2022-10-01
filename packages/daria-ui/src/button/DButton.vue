@@ -5,13 +5,14 @@ import DButtonOutlined from './DButtonOutlined.vue';
 import DButtonGhost from './DButtonGhost.vue';
 import DButtonLight from './DButtonLight.vue';
 import type { ButtonVariant } from './types';
+import { useButtonGroup } from './useButtonGroup';
 
 type Props = {
   variant?: ButtonVariant;
 };
 
 const props = withDefaults(defineProps<Props>(), {
-  variant: 'full'
+  variant: undefined
 });
 
 const variantMap = new Map<ButtonVariant, Component>([
@@ -21,7 +22,12 @@ const variantMap = new Map<ButtonVariant, Component>([
   ['light', DButtonLight]
 ]);
 
-const is = computed(() => variantMap.get(props.variant));
+const buttonGroup = useButtonGroup();
+const _variant = computed(
+  () => props.variant ?? buttonGroup.variant.value ?? 'full'
+);
+
+const is = computed(() => variantMap.get(_variant.value));
 </script>
 
 <template>

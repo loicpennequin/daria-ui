@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     DButtonBase: typeof import('./src/button/DButtonBase.vue')['default']
     DButtonFull: typeof import('./src/button/DButtonFull.vue')['default']
     DButtonGhost: typeof import('./src/button/DButtonGhost.vue')['default']
+    DButtonGroup: typeof import('./src/button/DButtonGroup.vue')['default']
     DButtonLight: typeof import('./src/button/DButtonLight.vue')['default']
     DButtonOutlined: typeof import('./src/button/DButtonOutlined.vue')['default']
     DDrawer: typeof import('./src/drawer/DDrawer.vue')['default']
@@ -24,5 +25,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TransitionChild: typeof import('@headlessui/vue')['TransitionChild']
+    UseButtonGroup: typeof import('./src/button/useButtonGroup.vue')['default']
   }
 }

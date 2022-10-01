@@ -24,7 +24,6 @@ import DrawerBasic from '@/components/examples/drawer/DrawerBasic.vue';
 | closable    | wether the drawer can be closed by the user                                                 | boolean  | -               | true    |
 | colorScheme | color scheme of the drawer                                                                  | string   | -               |         |
 | title       | the title of the drawer that will be displayed in the panel and announced by screen readers | string   | -               |     |
-| size        | the width of the drawer panel                                                               | string   | xs / sm / md / lg / xl / 2xl | md  |
 
 ### DrawerBackdrop
 
