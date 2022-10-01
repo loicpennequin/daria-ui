@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const props = defineProps<{ leftIcon?: string; rightIcon?: string }>();
 const attrs = useAttrs();
 
 const is = computed(() => {
@@ -26,6 +27,24 @@ const is = computed(() => {
     outline="focus:none"
     ring="transparent focus-visible:brand-4 2"
   >
+    <span
+      v-if="props.leftIcon"
+      m-r="2"
+      :m-l="-1"
+      :i="props.leftIcon"
+      block
+      w-1em
+      aspect-square
+    />
     <slot />
+    <span
+      v-if="props.rightIcon"
+      m-l="2"
+      :m-r="-1"
+      i-mdi-code-braces
+      block
+      w-1em
+      aspect-square
+    />
   </component>
 </template>

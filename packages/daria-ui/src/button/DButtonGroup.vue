@@ -13,7 +13,8 @@ useButtonGroupProvider({
 <template>
   <div
     flex
-    items-center
+    items="center"
+    justify="center"
     :rounded="
       props.pill
         ? `first:children:tl-full first:children:bl-full first:children:tr-0 first:children:br-0

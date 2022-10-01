@@ -2,7 +2,7 @@
 
 <template>
   <DButtonGroup cs-blue pill variant="outlined" m-5>
-    <DButton>Click me</DButton>
+    <DButton left-icon="mdi-account">Click me</DButton>
     <DButton>Click me</DButton>
     <DButton>Click me</DButton>
   </DButtonGroup>

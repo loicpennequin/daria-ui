@@ -11,9 +11,11 @@ import ButtonCustom from '@/components/examples/button/ButtonCustom.vue';
 # Button
 
 ## Props
-| Name    | Description   | Type     | Accepted Values               | Default |
-| ------- | ------------- | -------- | ----------------------------- | ------- |
-| variant | style variant | string   | full / light /outlined / ghost| full    |
+| Name      | Description          | Type     | Accepted Values               | Default |
+| --------- | -------------------- | -------- | ----------------------------- | ------- |
+| variant   | style variant        | string   | full / light /outlined / ghost| full    |
+| leftIcon  | the icon on the left | string   | -                             | -       |
+| rightIcon | the icon on the right| string   | -                             | -       |
 
 
 ## Emits
