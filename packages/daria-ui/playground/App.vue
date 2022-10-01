@@ -16,48 +16,53 @@ const toggleDark = () => {
       </DIconButton>
     </div>
 
-    <DDrawer v-model:is-opened="isOpened" cs-dark title="My Cool Drawer">
+    <DDrawer v-model:is-opened="isOpened" cs-light title="My Cool Drawer">
       <DDrawerBackdrop />
       <DDrawerContent>
-        <div p-5>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad
-            iste earum beatae, itaque, maiores laborum ipsa error harum iure
-            illo architecto illum mollitia, nihil commodi voluptate voluptates
-            provident nostrum.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad
-            iste earum beatae, itaque, maiores laborum ipsa error harum iure
-            illo architecto illum mollitia, nihil commodi voluptate voluptates
-            provident nostrum.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad
-            iste earum beatae, itaque, maiores laborum ipsa error harum iure
-            illo architecto illum mollitia, nihil commodi voluptate voluptates
-            provident nostrum.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad
-            iste earum beatae, itaque, maiores laborum ipsa error harum iure
-            illo architecto illum mollitia, nihil commodi voluptate voluptates
-            provident nostrum.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad
-            iste earum beatae, itaque, maiores laborum ipsa error harum iure
-            illo architecto illum mollitia, nihil commodi voluptate voluptates
-            provident nostrum.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad
-            iste earum beatae, itaque, maiores laborum ipsa error harum iure
-            illo architecto illum mollitia, nihil commodi voluptate voluptates
-            provident nostrum.
-          </p>
-        </div>
-        <template #footer>My Cool drawer footer</template>
+        <p text-xl>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi
+          iure distinctio nesciunt! Quis dolores delectus fugit dolorem aut fuga
+          veritatis accusantium magnam exercitationem architecto odio, minima
+          totam natus nam?
+        </p>
+        <p text-xl>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi
+          iure distinctio nesciunt! Quis dolores delectus fugit dolorem aut fuga
+          veritatis accusantium magnam exercitationem architecto odio, minima
+          totam natus nam?
+        </p>
+
+        <p text-xl>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi
+          iure distinctio nesciunt! Quis dolores delectus fugit dolorem aut fuga
+          veritatis accusantium magnam exercitationem architecto odio, minima
+          totam natus nam?
+        </p>
+
+        <p text-xl>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi
+          iure distinctio nesciunt! Quis dolores delectus fugit dolorem aut fuga
+          veritatis accusantium magnam exercitationem architecto odio, minima
+          totam natus nam?
+        </p>
+
+        <p text-xl>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi
+          iure distinctio nesciunt! Quis dolores delectus fugit dolorem aut fuga
+          veritatis accusantium magnam exercitationem architecto odio, minima
+          totam natus nam?
+        </p>
+
+        <p text-xl>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi
+          iure distinctio nesciunt! Quis dolores delectus fugit dolorem aut fuga
+          veritatis accusantium magnam exercitationem architecto odio, minima
+          totam natus nam?
+        </p>
+
+        <template #footer>
+          <DSurface>Cool drawer footer</DSurface>
+        </template>
       </DDrawerContent>
     </DDrawer>
   </DSurface>

@@ -61,6 +61,10 @@ import DrawerBasic from '@/components/examples/drawer/DrawerBasic.vue';
 |-------- | --------------------------------- | ---------- |
 | default | The content of the drawer header  | -          | 
 
+## Composables
+
+- useDrawerProvider()
+- useDrawer()
 ## Examples
 
 <CodeExample title="Basic Usage">

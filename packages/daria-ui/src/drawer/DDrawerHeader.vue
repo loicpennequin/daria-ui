@@ -1,15 +1,19 @@
 <script setup lang="ts">
+import { useSlotProps } from '@/utils/composables';
 import { useDrawer } from './useDrawer';
 
-const { title, closable, close, colorScheme } = useDrawer();
-
+const drawer = useDrawer();
+const { title, closable, close, colorScheme } = drawer;
+console.log(colorScheme.value);
 const bg = computed(() =>
-  colorScheme.value === 'light' ? 'context-1' : 'context-6'
+  colorScheme.value === 'light' ? 'white' : 'context-6'
 );
 
 const color = computed(() =>
   colorScheme.value === 'light' ? 'readable-1' : 'readable-6'
 );
+
+const slotProps = useSlotProps(drawer);
 </script>
 
 <template>
@@ -24,7 +28,7 @@ const color = computed(() =>
       sticky
       top-0
     >
-      <slot>
+      <slot v-bind="slotProps">
         <span text-xl leading-none>{{ title }}</span>
 
         <button

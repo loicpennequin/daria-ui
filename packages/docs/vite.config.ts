@@ -80,7 +80,11 @@ export default defineConfig({
         }),
         link(),
         meta()
-      ]
+      ],
+      markdownItSetup(md) {
+        md.use(require('markdown-it-anchor'));
+        md.use(require('markdown-it-table-of-contents'));
+      }
     }),
     AutoImport({
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],

@@ -9,7 +9,7 @@ const isSourceDisplayed = ref(false);
   <div
     border="solid 1 gray-3"
     class="code-example"
-    h-xs
+    :h="!isSourceDisplayed && 'md'"
     overflow="x-hidden y-auto"
     m-y-8
   >

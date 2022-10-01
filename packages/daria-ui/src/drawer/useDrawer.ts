@@ -5,7 +5,6 @@ import type { Ref, InjectionKey } from 'vue';
 export type DrawerContext = {
   isOpened: Ref<boolean>;
   closable: Ref<boolean>;
-  size: Ref<string>;
   colorScheme: Ref<Maybe<string>>;
   title: Ref<Maybe<string>>;
 
@@ -20,21 +19,19 @@ export const drawerInjectionKey = Symbol(
 
 export type UseDrawerProviderOptions = Pick<
   DrawerContext,
-  'isOpened' | 'closable' | 'colorScheme' | 'title' | 'size'
+  'isOpened' | 'closable' | 'colorScheme' | 'title'
 >;
 export const useDrawerProvider = ({
   isOpened,
   closable,
   colorScheme,
-  title,
-  size
+  title
 }: UseDrawerProviderOptions) => {
   const api: DrawerContext = {
     isOpened,
     closable,
     colorScheme,
     title,
-    size,
 
     open() {
       isOpened.value = true;

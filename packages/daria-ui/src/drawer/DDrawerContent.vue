@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useSlotProps } from '@/utils/composables';
 import { useDrawer } from './useDrawer';
-// const attrs = useAttrs();
-const { title, size } = useDrawer();
+
+const drawer = useDrawer();
+const { title } = drawer;
+const slotProps = useSlotProps(drawer);
 </script>
 
 <template>
@@ -19,23 +22,23 @@ const { title, size } = useDrawer();
       as="div"
       transition-transform
       w="full"
-      :max-w="size"
+      max-w="md"
       transform
       transition-all
       min-h-full
       overflow-y-auto
     >
       <DSurface min-h-full p="0" flex flex-col>
-        <slot name="header">
+        <slot name="header" v-bind="slotProps">
           <DDrawerHeader v-if="title" />
         </slot>
 
         <div flex-1>
-          <slot />
+          <slot v-bind="slotProps" />
         </div>
 
         <footer bg-inherit sticky bottom-0>
-          <slot name="footer"></slot>
+          <slot name="footer" v-bind="slotProps" />
         </footer>
       </DSurface>
     </DialogPanel>

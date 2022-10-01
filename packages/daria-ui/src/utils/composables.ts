@@ -28,6 +28,10 @@ export const useColorScheme = (el: Ref<Maybe<HTMLElement | VueInstance>>) => {
     attributes: true
   });
   onMounted(setColorScheme);
+  watch(el, setColorScheme);
 
   return cs;
 };
+
+export const useSlotProps = <T extends Record<string, any>>(obj: T) =>
+  reactive(obj);
