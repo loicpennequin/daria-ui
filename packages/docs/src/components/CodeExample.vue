@@ -23,7 +23,7 @@ const isSourceDisplayed = ref(false);
       sticky
       top-0
     >
-      <span text-lg font-semibold>{{ props.title }}</span>
+      <h3 text-lg font-semibold>{{ props.title }}</h3>
       <DIconButton
         title="view source"
         m-l-auto
