@@ -35,6 +35,7 @@ const is = computed(() => {
       block
       w-1em
       aspect-square
+      aria-hidden="true"
     />
     <slot />
     <span
@@ -45,6 +46,7 @@ const is = computed(() => {
       block
       w-1em
       aspect-square
+      aria-hidden="true"
     />
   </component>
 </template>
