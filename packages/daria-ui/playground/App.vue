@@ -1,20 +1,12 @@
 <script setup lang="ts">
-import { useToast } from '../src/toast/useToast';
-
-const { showError } = useToast();
-
-const showToast = () => {
-  showError({
-    title: 'I am a toast',
-    text: '...and I have a desription'
-  });
-};
+const isOpened = ref(false);
 </script>
 
 <template>
-  <div cs-blue>
-    <DButton @click="showToast">Show Toast</DButton>
+  <DButton @click="isOpened = true">Open Drawer</DButton>
 
-    <DToastBar />
-  </div>
+  <DDrawer v-model:is-opened="isOpened" title="Drawer">
+    <DDrawerBackdrop />
+    <DDrawerContent max-w="sm">Hello</DDrawerContent>
+  </DDrawer>
 </template>

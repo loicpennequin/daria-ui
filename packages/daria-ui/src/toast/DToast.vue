@@ -16,6 +16,7 @@ const color = computed(
 
 <template>
   <DSurface
+    role="alert"
     :cs="props.colorScheme"
     p="3"
     border-t="solid 8"
@@ -27,7 +28,6 @@ const color = computed(
     items-center
     gap-4
     style="--cols: auto 1fr auto"
-    role="status"
     un-cloak
   >
     <DToastIcon :icon="props.icon" color="context-5 dark:context-2" />
